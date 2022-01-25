@@ -9,6 +9,17 @@ npm run dev
 # or
 yarn dev
 ```
+## Rules for the smart contract
+/**
+     * @dev Admin function to set the contract.
+     * Block & unblock Users
+     * Send Reward token to Winner
+
+     * Rules for player:
+     * Will Start from joinit Function
+     * Will check the balance of the user
+     * Can clam/Withdraw the token to any wallet
+     **/
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
