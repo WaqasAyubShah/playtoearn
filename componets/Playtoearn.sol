@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.9;
-import "../ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 //import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 contract JoinGame {
@@ -54,7 +54,7 @@ contract JoinGame {
         return player.balance;
     }
 
-    function withdraw(uint amount, address destAddr) public payable {               
+    function withdraw(uint amount, address payable destAddr) public{               
         require(msg.sender == player, "Only owner can withdraw funds"); 
         require(amount <= balance, "Insufficient funds");
         destAddr.transfer(amount);
