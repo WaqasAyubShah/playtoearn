@@ -1,4 +1,18 @@
 // SPDX-License-Identifier: MIT
+    ////////////////////////////////////////////////////////////////////////
+    // PlaytoEarn Smart contract
+    /////////////////////////////////////////////////////////////////////////
+    /**
+     * @dev Admin function to set the contract.
+     * Block & unblock Users
+     * Send Reward token to Winner
+
+     * Rules for player:
+     * Will Start from joinit Function
+     * Will check the balance of the user
+     * Can clam/Withdraw the token to any wallet
+     **/
+
 
 pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -55,7 +69,7 @@ contract JoinGame {
     }
 
     function withdraw(uint amount, address payable destAddr) public{               
-        require(msg.sender == player, "Only owner can withdraw funds"); 
+        require(msg.sender == player || msg.sender == admin , "Only owner and player can withdraw funds"); 
         require(amount <= balance, "Insufficient funds");
         destAddr.transfer(amount);
         balance -= amount;
