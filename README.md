@@ -20,6 +20,9 @@ yarn dev
      * Will check the balance of the user
      * Can clam/Withdraw the token to any wallet
      **/
+## Test contract..
+address: 0x2C0Db17a5d48e33337Ef80B1341d818049e778Dd
+https://rinkeby.etherscan.io/address/0x2C0Db17a5d48e33337Ef80B1341d818049e778Dd
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
